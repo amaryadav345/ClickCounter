@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const onAdd = () => {
+    setCount((num) => {
+      return num + 1;
+    });
+  };
+
+  const onSub = (num) => {
+    setCount((num) => {
+      if (num > 0) return num - 1;
+      else alert("Sorry,Already Zero");
+      return 0;
+    });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="card">
+        <h1>Counter App</h1>
+        <h1>{count}</h1>
+        <button className="incr" onClick={onAdd}>
+          Increament
+        </button>
+        <button className="decr" onClick={onSub}>
+          Decreament
+        </button>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
