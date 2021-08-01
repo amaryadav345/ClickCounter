@@ -22,7 +22,7 @@ const App = () => {
     <div className="App">
       <div className="card">
         <h1>Counter App</h1>
-        <h1>{count}</h1>
+        {count ? <h1>{count}</h1> : <h1 id="text-display">{count}</h1>}
         <button className="incr" onClick={onAdd}>
           Increament
         </button>

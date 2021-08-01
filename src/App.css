@@ -45,3 +45,7 @@ button {
   background-color: Red;
   opacity: 0.8;
 }
+
+#text-display {
+  background-color: red;
+}
