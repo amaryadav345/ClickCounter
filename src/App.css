@@ -8,40 +8,51 @@
 }
 
 .card {
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: white;
-  width: auto;
+  min-width: 350px;
   min-height: 300px;
+  border: outset;
 }
 
 h1 {
-  /* margin-left: 10px; */
   background-color: #262a53;
+
   color: #fff;
   text-align: center;
+  box-shadow: #faad80;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
-button {
-  border-left: transparent;
+#incr {
+  width: 70px;
+  height: 70px;
+
   background-color: #262a53;
   color: #fff;
-  font-size: 40px;
-  border: none;
-  outline: none;
-  margin-left: 10px;
-  margin-right: 10px;
-  cursor: pointer;
-  margin-top: 20px;
 }
 
-.incr:hover {
+.buttonDiv {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#decr {
+  width: 70px;
+  height: 70px;
+  background-color: #262a53;
+  color: #fff;
+}
+
+#incr:hover {
   background-color: green;
   opacity: 0.5;
 }
 
-.decr:hover {
+#decr:hover {
   background-color: Red;
   opacity: 0.8;
 }
